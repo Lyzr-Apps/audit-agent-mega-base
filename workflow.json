@@ -34,7 +34,7 @@
       "top_p": 1,
       "has_knowledge_base": true,
       "trigger": "Auto (via Manager)",
-      "managed_by": "6970866a1d92f5e2dd229050",
+      "managed_by": "69708f241d92f5e2dd22924f",
       "response_schema": "response_schemas/liquidity_risk_agent_response.json"
     },
     {
@@ -48,7 +48,7 @@
       "top_p": 1,
       "has_knowledge_base": true,
       "trigger": "Auto (via Manager)",
-      "managed_by": "6970866a1d92f5e2dd229050",
+      "managed_by": "69708f241d92f5e2dd22924f",
       "response_schema": "response_schemas/operational_efficiency_agent_response.json"
     },
     {
@@ -62,7 +62,7 @@
       "top_p": 1,
       "has_knowledge_base": true,
       "trigger": "Auto (via Manager)",
-      "managed_by": "6970866a1d92f5e2dd229050",
+      "managed_by": "69708f241d92f5e2dd22924f",
       "response_schema": "response_schemas/sustainability_analysis_agent_response.json"
     },
     {
@@ -76,14 +76,14 @@
       "top_p": 1,
       "has_knowledge_base": true,
       "trigger": "Auto (via Manager)",
-      "managed_by": "6970866a1d92f5e2dd229050",
+      "managed_by": "69708f241d92f5e2dd22924f",
       "response_schema": "response_schemas/external_auditor_lens_agent_response.json"
     },
     {
-      "agent_id": "6970866a1d92f5e2dd229050",
+      "agent_id": "69708f241d92f5e2dd22924f",
       "name": "Diligence Coordinator Agent",
       "type": "manager",
-      "description": "Orchestrates comprehensive due diligence workflow by dispatching analysis to specialized agents and synthesizing consolidated recommendations",
+      "description": "Orchestrates comprehensive due diligence workflow by dispatching analysis to specialized agents, cross-references findings across agents, resolves conflicting assessments, and synthesizes consolidated recommendations with prioritized risk scores",
       "provider": "OpenAI",
       "model": "gpt-4.1",
       "temperature": 0.3,
@@ -97,8 +97,8 @@
         "6970863cd6d0dcaec11169af"
       ],
       "response_schema": "response_schemas/diligence_coordinator_agent_response.json",
-      "last_updated": "2026-01-21T08:15:00Z",
-      "update_note": "Updated to return pure JSON without markdown code blocks"
+      "last_updated": "2026-01-21T09:45:00Z",
+      "update_note": "RECREATED with proper managed_agents configuration for actual sub-agent delegation"
     }
   ],
   "workflow": {
@@ -130,7 +130,7 @@
         "type": "Agent",
         "label": "Diligence Coordinator Agent",
         "nodeCategory": "agent",
-        "agent_id": "6970866a1d92f5e2dd229050",
+        "agent_id": "69708f241d92f5e2dd22924f",
         "position": { "x": 350, "y": 300 }
       },
       {
