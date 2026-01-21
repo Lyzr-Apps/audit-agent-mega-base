@@ -1,0 +1,103 @@
+{
+  "agent_name": "Sustainability Analysis Agent",
+  "agent_id": "6970861b1d92f5e2dd229038",
+  "agent_purpose": "analyzer",
+  "description": "Returns sustainability analysis with one-time items, non-recurring revenue, accounting assumptions, and projection feasibility",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "sustainability_score": "string",
+      "one_time_items": [
+        "any"
+      ],
+      "non_recurring_revenue": {
+        "total_amount": "string",
+        "percentage_of_total": "string",
+        "items": [
+          "any"
+        ],
+        "sustainability_risk": "string"
+      },
+      "accounting_assumptions": [
+        "any"
+      ],
+      "projection_sustainability": {
+        "revenue_growth_assumptions": "string",
+        "margin_expansion_feasibility": "string",
+        "capex_assumptions": "string",
+        "overall_assessment": "string"
+      },
+      "quality_of_earnings_issues": [
+        "any"
+      ],
+      "recommendations": [
+        "any"
+      ],
+      "red_flags": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "sustainability_score": "0",
+      "one_time_items": [],
+      "non_recurring_revenue": {
+        "total_amount": "0",
+        "percentage_of_total": "0",
+        "items": [],
+        "sustainability_risk": "Low"
+      },
+      "accounting_assumptions": [],
+      "projection_sustainability": {
+        "revenue_growth_assumptions": "",
+        "margin_expansion_feasibility": "",
+        "capex_assumptions": "",
+        "overall_assessment": ""
+      },
+      "quality_of_earnings_issues": [],
+      "recommendations": [],
+      "red_flags": []
+    },
+    "metadata": {
+      "agent_name": "Sustainability Analysis Agent",
+      "timestamp": "2024-06-15T21:15:34Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-21T07:57:43.679051",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "sustainability_score": "0",
+      "one_time_items": [],
+      "non_recurring_revenue": {
+        "total_amount": "0",
+        "percentage_of_total": "0",
+        "items": [],
+        "sustainability_risk": "Low"
+      },
+      "accounting_assumptions": [],
+      "projection_sustainability": {
+        "revenue_growth_assumptions": "",
+        "margin_expansion_feasibility": "",
+        "capex_assumptions": "",
+        "overall_assessment": ""
+      },
+      "quality_of_earnings_issues": [],
+      "recommendations": [],
+      "red_flags": []
+    },
+    "metadata": {
+      "agent_name": "Sustainability Analysis Agent",
+      "timestamp": "2024-06-15T21:15:34Z"
+    }
+  },
+  "test_passed": true
+}

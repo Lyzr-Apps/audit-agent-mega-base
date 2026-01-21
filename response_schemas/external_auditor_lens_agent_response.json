@@ -1,0 +1,89 @@
+{
+  "agent_name": "External Auditor Lens Agent",
+  "agent_id": "6970863cd6d0dcaec11169af",
+  "agent_purpose": "analyzer",
+  "description": "Returns audit perspective analysis with disclosure gaps, unusual transactions, related party issues, and further diligence recommendations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "audit_risk_score": "string",
+      "disclosure_gaps": [
+        "any"
+      ],
+      "unusual_transactions": [
+        "any"
+      ],
+      "related_party_issues": {
+        "related_parties_identified": [
+          "any"
+        ],
+        "transactions": [
+          "any"
+        ],
+        "overall_concern": "string"
+      },
+      "accounting_irregularities": [
+        "any"
+      ],
+      "further_diligence_areas": [
+        "any"
+      ],
+      "audit_opinion_concerns": [
+        "any"
+      ],
+      "recommendations": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "audit_risk_score": "0",
+      "disclosure_gaps": [],
+      "unusual_transactions": [],
+      "related_party_issues": {
+        "related_parties_identified": [],
+        "transactions": [],
+        "overall_concern": "Low"
+      },
+      "accounting_irregularities": [],
+      "further_diligence_areas": [],
+      "audit_opinion_concerns": [],
+      "recommendations": []
+    },
+    "metadata": {
+      "agent_name": "External Auditor Lens Agent",
+      "timestamp": "2024-06-12T23:12:42Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-21T07:57:45.844146",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "audit_risk_score": "0",
+      "disclosure_gaps": [],
+      "unusual_transactions": [],
+      "related_party_issues": {
+        "related_parties_identified": [],
+        "transactions": [],
+        "overall_concern": "Low"
+      },
+      "accounting_irregularities": [],
+      "further_diligence_areas": [],
+      "audit_opinion_concerns": [],
+      "recommendations": []
+    },
+    "metadata": {
+      "agent_name": "External Auditor Lens Agent",
+      "timestamp": "2024-06-12T23:12:42Z"
+    }
+  },
+  "test_passed": true
+}

@@ -1,0 +1,28 @@
+{
+  "agent_name": "Document Q&A Agent",
+  "agent_id": "697085c51d92f5e2dd22900a",
+  "test_message": "What are the key liquidity risks in the uploaded financial statements?",
+  "expected_purpose": "qa",
+  "timestamp": "2026-01-21T07:57:34.722495",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "answer": "I am unable to answer the question because the provided document information does not contain any uploaded financial statements or specific content regarding liquidity risks. Please upload the relevant financial statements or provide access to the specific documents for an accurate assessment of key liquidity risks.",
+      "citations": [],
+      "confidence_score": 0,
+      "related_topics": [
+        "Liquidity Ratios",
+        "Debt Obligations",
+        "Working Capital Analysis",
+        "Cash Flow Risks"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Document Q&A Agent",
+      "timestamp": "2024-06-23T11:41:48Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"answer\": \"I am unable to answer the question because the provided document information does not contain any uploaded financial statements or specific content regarding liquidity risks. Please upload the relevant financial statements or provide access to the specific documents for an accurate assessment of key liquidity risks.\",\n    \"citations\": [],\n    \"confidence_score\": 0,\n    \"related_topics\": [\"Liquidity Ratios\", \"Debt Obligations\", \"Working Capital Analysis\", \"Cash Flow Risks\"]\n  },\n  \"metadata\": {\n    \"agent_name\": \"Document Q&A Agent\",\n    \"timestamp\": \"2024-06-23T11:41:48Z\"\n  }\n}"
+}

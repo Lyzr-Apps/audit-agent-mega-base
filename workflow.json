@@ -1,0 +1,198 @@
+{
+  "workflow_name": "Financial Due Diligence Intelligence Platform",
+  "description": "Comprehensive PE deal due diligence with specialized analysis agents coordinated by manager agent",
+  "version": "1.0.0",
+  "created_at": "2026-01-21",
+  "knowledge_base": {
+    "rag_id": "697085b457f90ab8a46e90c1",
+    "rag_name": "pedealdocumentsknowledgebaseru1x",
+    "name": "PE Deal Documents Knowledge Base",
+    "description": "Knowledge base for private equity due diligence documents including CIMs, financial statements, cash flow projections, and deal documentation"
+  },
+  "agents": [
+    {
+      "agent_id": "697085c51d92f5e2dd22900a",
+      "name": "Document Q&A Agent",
+      "type": "independent",
+      "description": "Answers ad-hoc questions about uploaded documents with exact source citations, paragraph references, and table extractions",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "trigger": "Ask Question on Document Library",
+      "response_schema": "response_schemas/document_q_a_agent_response.json"
+    },
+    {
+      "agent_id": "697085e11d92f5e2dd229018",
+      "name": "Liquidity Risk Agent",
+      "type": "sub-agent",
+      "description": "Analyzes cash flow statements and financial documents for liquidity concerns, working capital trends, debt covenant compliance, and short-term solvency risks",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "trigger": "Auto (via Manager)",
+      "managed_by": "6970866a1d92f5e2dd229050",
+      "response_schema": "response_schemas/liquidity_risk_agent_response.json"
+    },
+    {
+      "agent_id": "697085fcd6d0dcaec111699d",
+      "name": "Operational Efficiency Agent",
+      "type": "sub-agent",
+      "description": "Evaluates operational metrics, margin analysis, cost structure sustainability, and efficiency ratios across financial statements",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "trigger": "Auto (via Manager)",
+      "managed_by": "6970866a1d92f5e2dd229050",
+      "response_schema": "response_schemas/operational_efficiency_agent_response.json"
+    },
+    {
+      "agent_id": "6970861b1d92f5e2dd229038",
+      "name": "Sustainability Analysis Agent",
+      "type": "sub-agent",
+      "description": "Identifies one-time items, non-recurring revenue, aggressive accounting assumptions, and model sustainability concerns",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "trigger": "Auto (via Manager)",
+      "managed_by": "6970866a1d92f5e2dd229050",
+      "response_schema": "response_schemas/sustainability_analysis_agent_response.json"
+    },
+    {
+      "agent_id": "6970863cd6d0dcaec11169af",
+      "name": "External Auditor Lens Agent",
+      "type": "sub-agent",
+      "description": "Reviews documents through auditor perspective, identifying disclosure gaps, unusual transactions, and related party issues",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "trigger": "Auto (via Manager)",
+      "managed_by": "6970866a1d92f5e2dd229050",
+      "response_schema": "response_schemas/external_auditor_lens_agent_response.json"
+    },
+    {
+      "agent_id": "6970866a1d92f5e2dd229050",
+      "name": "Diligence Coordinator Agent",
+      "type": "manager",
+      "description": "Orchestrates comprehensive due diligence workflow by dispatching analysis to specialized agents and synthesizing consolidated recommendations",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "trigger": "Run Full Analysis on Analysis Dashboard",
+      "manages_agents": [
+        "697085e11d92f5e2dd229018",
+        "697085fcd6d0dcaec111699d",
+        "6970861b1d92f5e2dd229038",
+        "6970863cd6d0dcaec11169af"
+      ],
+      "response_schema": "response_schemas/diligence_coordinator_agent_response.json",
+      "last_updated": "2026-01-21T08:15:00Z",
+      "update_note": "Updated to return pure JSON without markdown code blocks"
+    }
+  ],
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "User Input",
+        "nodeCategory": "input",
+        "position": { "x": 100, "y": 200 }
+      },
+      {
+        "id": "doc_qa_agent",
+        "type": "Agent",
+        "label": "Document Q&A Agent",
+        "nodeCategory": "agent",
+        "agent_id": "697085c51d92f5e2dd22900a",
+        "position": { "x": 350, "y": 100 }
+      },
+      {
+        "id": "qa_output",
+        "type": "Output",
+        "label": "Q&A Response",
+        "nodeCategory": "end",
+        "position": { "x": 600, "y": 100 }
+      },
+      {
+        "id": "diligence_coordinator",
+        "type": "Agent",
+        "label": "Diligence Coordinator Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6970866a1d92f5e2dd229050",
+        "position": { "x": 350, "y": 300 }
+      },
+      {
+        "id": "liquidity_risk_agent",
+        "type": "Agent",
+        "label": "Liquidity Risk Agent",
+        "nodeCategory": "agent",
+        "agent_id": "697085e11d92f5e2dd229018",
+        "position": { "x": 600, "y": 200 }
+      },
+      {
+        "id": "operational_efficiency_agent",
+        "type": "Agent",
+        "label": "Operational Efficiency Agent",
+        "nodeCategory": "agent",
+        "agent_id": "697085fcd6d0dcaec111699d",
+        "position": { "x": 600, "y": 300 }
+      },
+      {
+        "id": "sustainability_analysis_agent",
+        "type": "Agent",
+        "label": "Sustainability Analysis Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6970861b1d92f5e2dd229038",
+        "position": { "x": 600, "y": 400 }
+      },
+      {
+        "id": "external_auditor_agent",
+        "type": "Agent",
+        "label": "External Auditor Lens Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6970863cd6d0dcaec11169af",
+        "position": { "x": 600, "y": 500 }
+      },
+      {
+        "id": "analysis_output",
+        "type": "Output",
+        "label": "Full Analysis Report",
+        "nodeCategory": "end",
+        "position": { "x": 850, "y": 350 }
+      }
+    ],
+    "edges": [
+      { "source": "input_node", "target": "doc_qa_agent" },
+      { "source": "doc_qa_agent", "target": "qa_output" },
+      { "source": "input_node", "target": "diligence_coordinator" },
+      { "source": "diligence_coordinator", "target": "liquidity_risk_agent" },
+      { "source": "diligence_coordinator", "target": "operational_efficiency_agent" },
+      { "source": "diligence_coordinator", "target": "sustainability_analysis_agent" },
+      { "source": "diligence_coordinator", "target": "external_auditor_agent" },
+      { "source": "liquidity_risk_agent", "target": "analysis_output" },
+      { "source": "operational_efficiency_agent", "target": "analysis_output" },
+      { "source": "sustainability_analysis_agent", "target": "analysis_output" },
+      { "source": "external_auditor_agent", "target": "analysis_output" }
+    ]
+  },
+  "integration_summary": {
+    "total_agents": 6,
+    "independent_agents": 1,
+    "manager_agents": 1,
+    "sub_agents": 4,
+    "knowledge_bases": 1,
+    "workflow_paths": 2
+  }
+}

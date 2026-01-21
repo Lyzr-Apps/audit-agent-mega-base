@@ -1,0 +1,31 @@
+{
+  "agent_name": "External Auditor Lens Agent",
+  "agent_id": "6970863cd6d0dcaec11169af",
+  "test_message": "Review the documents for disclosure gaps and unusual transactions",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-21T07:57:45.843373",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "audit_risk_score": "0",
+      "disclosure_gaps": [],
+      "unusual_transactions": [],
+      "related_party_issues": {
+        "related_parties_identified": [],
+        "transactions": [],
+        "overall_concern": "Low"
+      },
+      "accounting_irregularities": [],
+      "further_diligence_areas": [],
+      "audit_opinion_concerns": [],
+      "recommendations": []
+    },
+    "metadata": {
+      "agent_name": "External Auditor Lens Agent",
+      "timestamp": "2024-06-12T23:12:42Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"audit_risk_score\": \"0\",\n    \"disclosure_gaps\": [],\n    \"unusual_transactions\": [],\n    \"related_party_issues\": {\n      \"related_parties_identified\": [],\n      \"transactions\": [],\n      \"overall_concern\": \"Low\"\n    },\n    \"accounting_irregularities\": [],\n    \"further_diligence_areas\": [],\n    \"audit_opinion_concerns\": [],\n    \"recommendations\": []\n  },\n  \"metadata\": {\n    \"agent_name\": \"External Auditor Lens Agent\",\n    \"timestamp\": \"2024-06-12T23:12:42Z\"\n  }\n}"
+}

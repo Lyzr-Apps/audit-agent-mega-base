@@ -1,0 +1,101 @@
+{
+  "agent_name": "Operational Efficiency Agent",
+  "agent_id": "697085fcd6d0dcaec111699d",
+  "agent_purpose": "analyzer",
+  "description": "Returns operational efficiency analysis with margins, cost structure, efficiency ratios, and improvement opportunities",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "efficiency_score": "string",
+      "margin_analysis": {
+        "gross_margin": "string",
+        "operating_margin": "string",
+        "ebitda_margin": "string",
+        "trend": "string",
+        "vs_benchmark": "string"
+      },
+      "cost_structure": {
+        "fixed_costs_percentage": "string",
+        "variable_costs_percentage": "string",
+        "sustainability_assessment": "string",
+        "key_drivers": [
+          "any"
+        ]
+      },
+      "efficiency_ratios": [
+        "any"
+      ],
+      "operational_strengths": [
+        "any"
+      ],
+      "improvement_opportunities": [
+        "any"
+      ],
+      "red_flags": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "efficiency_score": "",
+      "margin_analysis": {
+        "gross_margin": "",
+        "operating_margin": "",
+        "ebitda_margin": "",
+        "trend": "",
+        "vs_benchmark": ""
+      },
+      "cost_structure": {
+        "fixed_costs_percentage": "",
+        "variable_costs_percentage": "",
+        "sustainability_assessment": "",
+        "key_drivers": []
+      },
+      "efficiency_ratios": [],
+      "operational_strengths": [],
+      "improvement_opportunities": [],
+      "red_flags": []
+    },
+    "metadata": {
+      "agent_name": "Operational Efficiency Agent",
+      "timestamp": "2024-06-13T08:24:46Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-21T07:57:40.040768",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "efficiency_score": "",
+      "margin_analysis": {
+        "gross_margin": "",
+        "operating_margin": "",
+        "ebitda_margin": "",
+        "trend": "",
+        "vs_benchmark": ""
+      },
+      "cost_structure": {
+        "fixed_costs_percentage": "",
+        "variable_costs_percentage": "",
+        "sustainability_assessment": "",
+        "key_drivers": []
+      },
+      "efficiency_ratios": [],
+      "operational_strengths": [],
+      "improvement_opportunities": [],
+      "red_flags": []
+    },
+    "metadata": {
+      "agent_name": "Operational Efficiency Agent",
+      "timestamp": "2024-06-13T08:24:46Z"
+    }
+  },
+  "test_passed": true
+}

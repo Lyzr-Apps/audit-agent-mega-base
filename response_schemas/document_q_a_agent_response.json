@@ -1,0 +1,63 @@
+{
+  "agent_name": "Document Q&A Agent",
+  "agent_id": "697085c51d92f5e2dd22900a",
+  "agent_purpose": "research",
+  "description": "Returns answers with document citations, confidence scores, and related topics for follow-up queries",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "answer": "string",
+      "citations": [
+        "any"
+      ],
+      "confidence_score": "number",
+      "related_topics": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "answer": "I am unable to answer the question because the provided document information does not contain any uploaded financial statements or specific content regarding liquidity risks. Please upload the relevant financial statements or provide access to the specific documents for an accurate assessment of key liquidity risks.",
+      "citations": [],
+      "confidence_score": 0,
+      "related_topics": [
+        "Liquidity Ratios",
+        "Debt Obligations",
+        "Working Capital Analysis",
+        "Cash Flow Risks"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Document Q&A Agent",
+      "timestamp": "2024-06-23T11:41:48Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-21T07:57:34.723395",
+  "test_message_used": "Research a sample topic for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "answer": "I am unable to answer the question because the provided document information does not contain any uploaded financial statements or specific content regarding liquidity risks. Please upload the relevant financial statements or provide access to the specific documents for an accurate assessment of key liquidity risks.",
+      "citations": [],
+      "confidence_score": 0,
+      "related_topics": [
+        "Liquidity Ratios",
+        "Debt Obligations",
+        "Working Capital Analysis",
+        "Cash Flow Risks"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Document Q&A Agent",
+      "timestamp": "2024-06-23T11:41:48Z"
+    }
+  },
+  "test_passed": true
+}

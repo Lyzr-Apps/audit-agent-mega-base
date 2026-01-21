@@ -1,0 +1,95 @@
+{
+  "agent_name": "Liquidity Risk Agent",
+  "agent_id": "697085e11d92f5e2dd229018",
+  "agent_purpose": "analyzer",
+  "description": "Returns liquidity risk analysis with metrics, cash flow trends, covenant compliance, and risk assessments",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "risk_level": "string",
+      "liquidity_score": "string",
+      "key_findings": [
+        "any"
+      ],
+      "cash_flow_trends": {
+        "operating_cash_flow": "string",
+        "free_cash_flow": "string",
+        "trend_direction": "string",
+        "concerns": [
+          "any"
+        ]
+      },
+      "debt_covenant_status": {
+        "compliant": "string",
+        "covenant_details": [
+          "any"
+        ],
+        "risk_of_breach": "string"
+      },
+      "recommendations": [
+        "any"
+      ],
+      "red_flags": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "risk_level": "",
+      "liquidity_score": "",
+      "key_findings": [],
+      "cash_flow_trends": {
+        "operating_cash_flow": "",
+        "free_cash_flow": "",
+        "trend_direction": "",
+        "concerns": []
+      },
+      "debt_covenant_status": {
+        "compliant": "",
+        "covenant_details": [],
+        "risk_of_breach": ""
+      },
+      "recommendations": [],
+      "red_flags": []
+    },
+    "metadata": {
+      "agent_name": "Liquidity Risk Agent",
+      "timestamp": "2024-06-09T09:15:14Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-21T07:57:37.748822",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "risk_level": "",
+      "liquidity_score": "",
+      "key_findings": [],
+      "cash_flow_trends": {
+        "operating_cash_flow": "",
+        "free_cash_flow": "",
+        "trend_direction": "",
+        "concerns": []
+      },
+      "debt_covenant_status": {
+        "compliant": "",
+        "covenant_details": [],
+        "risk_of_breach": ""
+      },
+      "recommendations": [],
+      "red_flags": []
+    },
+    "metadata": {
+      "agent_name": "Liquidity Risk Agent",
+      "timestamp": "2024-06-09T09:15:14Z"
+    }
+  },
+  "test_passed": true
+}

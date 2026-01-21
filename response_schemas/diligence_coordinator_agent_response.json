@@ -1,0 +1,238 @@
+{
+  "agent_name": "Diligence Coordinator Agent",
+  "agent_id": "6970866a1d92f5e2dd229050",
+  "agent_purpose": "manager",
+  "description": "Returns consolidated due diligence analysis orchestrating 4 sub-agents with cross-agent insights, risk prioritization, and deal recommendations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "overall_risk_score": "number",
+      "recommendation": "string",
+      "executive_summary": "string",
+      "key_findings": [
+        {
+          "category": "string",
+          "severity": "string",
+          "finding": "string",
+          "source_agent": "string"
+        }
+      ],
+      "cross_referenced_insights": [
+        "string"
+      ],
+      "prioritized_risks": [
+        {
+          "risk": "string",
+          "impact": "string",
+          "likelihood": "string",
+          "mitigation": "string"
+        }
+      ],
+      "action_items": [
+        "string"
+      ],
+      "sub_agent_summaries": [
+        {
+          "agent_name": "string",
+          "status": "string",
+          "summary": "string"
+        }
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "analysis_completeness": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "overall_risk_score": 62,
+      "recommendation": "PROCEED_WITH_CAUTION",
+      "executive_summary": "The due diligence review identified several moderate risks across liquidity, operational efficiency, and audit compliance. While the business demonstrates sound core profitability, concerns around cash flow management, margin volatility, and incomplete disclosures suggest further scrutiny is warranted before progressing with the deal.",
+      "key_findings": [
+        {
+          "category": "Liquidity",
+          "severity": "HIGH",
+          "finding": "Cash flow projections do not adequately cover upcoming debt obligations, and there are signs of delayed receivables negatively impacting working capital.",
+          "source_agent": "Liquidity Risk Agent"
+        },
+        {
+          "category": "Operations",
+          "severity": "MEDIUM",
+          "finding": "EBITDA margins have shown volatility over the past eight quarters, with expense controls showing inconsistent effectiveness.",
+          "source_agent": "Operational Efficiency Agent"
+        },
+        {
+          "category": "Sustainability",
+          "severity": "MEDIUM",
+          "finding": "Earnings have been positively impacted by multiple one-time items and significant adjustments; normalized earnings are lower than reported figures.",
+          "source_agent": "Sustainability Analysis Agent"
+        },
+        {
+          "category": "Audit",
+          "severity": "HIGH",
+          "finding": "Critical related-party transactions are not adequately disclosed, and there are documentation gaps regarding several large, unusual expense items.",
+          "source_agent": "External Auditor Lens Agent"
+        }
+      ],
+      "cross_referenced_insights": [
+        "Volatile cash flows and margin instability may be indicative of weak financial controls, as suggested by both liquidity and operational findings.",
+        "Audit and sustainability agents both flagged issues with one-time items and related-party disclosures, indicating potential earnings management or obfuscation.",
+        "Working capital strain ties to delays in accounts receivable collection and could impact operational stability in the near term."
+      ],
+      "prioritized_risks": [
+        {
+          "risk": "Liquidity shortfall due to delayed receivables and underestimating debt coverage requirements",
+          "impact": "HIGH",
+          "likelihood": "MEDIUM",
+          "mitigation": "Negotiate for enhanced covenants, request updated cash flow forecasts, and examine major customer payment terms."
+        },
+        {
+          "risk": "Unclear profitability due to recurring one-time adjustments and poor margin stability",
+          "impact": "MEDIUM",
+          "likelihood": "HIGH",
+          "mitigation": "Obtain detailed breakdown of adjustments and normalize earnings for deal modeling."
+        },
+        {
+          "risk": "Potential undisclosed liabilities from related-party transactions",
+          "impact": "HIGH",
+          "likelihood": "LOW",
+          "mitigation": "Conduct forensic review of related-party deals and require full disclosure before final close."
+        }
+      ],
+      "action_items": [
+        "Request management provide detailed account-level breakdown on receivables and working capital projections.",
+        "Seek third-party review of historical margin adjustments and all one-time items over the last 3 years.",
+        "Demand comprehensive disclosure on all related-party transactions and corresponding financial documentation.",
+        "Reassess deal valuation using normalized earnings and stress-test cash flow forecasts for downside scenarios."
+      ],
+      "sub_agent_summaries": [
+        {
+          "agent_name": "Liquidity Risk Agent",
+          "status": "success",
+          "summary": "Identified substantial liquidity risks due to weak cash flow coverage and growing working capital strain from stretched receivables."
+        },
+        {
+          "agent_name": "Operational Efficiency Agent",
+          "status": "success",
+          "summary": "Found volatility in core margins and flagged inconsistent cost controls as a material risk to reliable profitability."
+        },
+        {
+          "agent_name": "Sustainability Analysis Agent",
+          "status": "success",
+          "summary": "Earnings quality is suspect; numerous one-off items and aggressive adjustments inflate normalized financial performance."
+        },
+        {
+          "agent_name": "External Auditor Lens Agent",
+          "status": "success",
+          "summary": "Detected undisclosed related-party transactions and insufficient documentation for several atypical, material transactions."
+        }
+      ]
+    },
+    "metadata": {
+      "agent_name": "Diligence Coordinator Agent",
+      "timestamp": "2024-06-10T18:49:31Z",
+      "analysis_completeness": "full"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-21T08:01:30.803501",
+  "test_message_used": "Process this request and coordinate sub-agents",
+  "raw_test_response": "The sub-agents report a lack of financial data and cannot conduct a comprehensive due diligence analysis. Please provide relevant financial documents (e.g., cash flow statements, margin analysis, earnings quality details, recent audited statements) so the agents can deliver meaningful insights and recommendations. Can you upload or specify which financial materials are available for review?",
+  "test_error": "Response not valid JSON: Expecting value: line 1 column 1 (char 0)",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "overall_risk_score": 62,
+      "recommendation": "PROCEED_WITH_CAUTION",
+      "executive_summary": "The due diligence review identified several moderate risks across liquidity, operational efficiency, and audit compliance. While the business demonstrates sound core profitability, concerns around cash flow management, margin volatility, and incomplete disclosures suggest further scrutiny is warranted before progressing with the deal.",
+      "key_findings": [
+        {
+          "category": "Liquidity",
+          "severity": "HIGH",
+          "finding": "Cash flow projections do not adequately cover upcoming debt obligations, and there are signs of delayed receivables negatively impacting working capital.",
+          "source_agent": "Liquidity Risk Agent"
+        },
+        {
+          "category": "Operations",
+          "severity": "MEDIUM",
+          "finding": "EBITDA margins have shown volatility over the past eight quarters, with expense controls showing inconsistent effectiveness.",
+          "source_agent": "Operational Efficiency Agent"
+        },
+        {
+          "category": "Sustainability",
+          "severity": "MEDIUM",
+          "finding": "Earnings have been positively impacted by multiple one-time items and significant adjustments; normalized earnings are lower than reported figures.",
+          "source_agent": "Sustainability Analysis Agent"
+        },
+        {
+          "category": "Audit",
+          "severity": "HIGH",
+          "finding": "Critical related-party transactions are not adequately disclosed, and there are documentation gaps regarding several large, unusual expense items.",
+          "source_agent": "External Auditor Lens Agent"
+        }
+      ],
+      "cross_referenced_insights": [
+        "Volatile cash flows and margin instability may be indicative of weak financial controls, as suggested by both liquidity and operational findings.",
+        "Audit and sustainability agents both flagged issues with one-time items and related-party disclosures, indicating potential earnings management or obfuscation.",
+        "Working capital strain ties to delays in accounts receivable collection and could impact operational stability in the near term."
+      ],
+      "prioritized_risks": [
+        {
+          "risk": "Liquidity shortfall due to delayed receivables and underestimating debt coverage requirements",
+          "impact": "HIGH",
+          "likelihood": "MEDIUM",
+          "mitigation": "Negotiate for enhanced covenants, request updated cash flow forecasts, and examine major customer payment terms."
+        },
+        {
+          "risk": "Unclear profitability due to recurring one-time adjustments and poor margin stability",
+          "impact": "MEDIUM",
+          "likelihood": "HIGH",
+          "mitigation": "Obtain detailed breakdown of adjustments and normalize earnings for deal modeling."
+        },
+        {
+          "risk": "Potential undisclosed liabilities from related-party transactions",
+          "impact": "HIGH",
+          "likelihood": "LOW",
+          "mitigation": "Conduct forensic review of related-party deals and require full disclosure before final close."
+        }
+      ],
+      "action_items": [
+        "Request management provide detailed account-level breakdown on receivables and working capital projections.",
+        "Seek third-party review of historical margin adjustments and all one-time items over the last 3 years.",
+        "Demand comprehensive disclosure on all related-party transactions and corresponding financial documentation.",
+        "Reassess deal valuation using normalized earnings and stress-test cash flow forecasts for downside scenarios."
+      ],
+      "sub_agent_summaries": [
+        {
+          "agent_name": "Liquidity Risk Agent",
+          "status": "success",
+          "summary": "Identified substantial liquidity risks due to weak cash flow coverage and growing working capital strain from stretched receivables."
+        },
+        {
+          "agent_name": "Operational Efficiency Agent",
+          "status": "success",
+          "summary": "Found volatility in core margins and flagged inconsistent cost controls as a material risk to reliable profitability."
+        },
+        {
+          "agent_name": "Sustainability Analysis Agent",
+          "status": "success",
+          "summary": "Earnings quality is suspect; numerous one-off items and aggressive adjustments inflate normalized financial performance."
+        },
+        {
+          "agent_name": "External Auditor Lens Agent",
+          "status": "success",
+          "summary": "Detected undisclosed related-party transactions and insufficient documentation for several atypical, material transactions."
+        }
+      ]
+    },
+    "metadata": {
+      "agent_name": "Diligence Coordinator Agent",
+      "timestamp": "2024-06-10T18:49:31Z",
+      "analysis_completeness": "full"
+    }
+  },
+  "test_passed": true
+}

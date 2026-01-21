@@ -1,0 +1,37 @@
+{
+  "agent_name": "Operational Efficiency Agent",
+  "agent_id": "697085fcd6d0dcaec111699d",
+  "test_message": "Evaluate the operational metrics and margin analysis from the financial statements",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-21T07:57:40.040094",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "efficiency_score": "",
+      "margin_analysis": {
+        "gross_margin": "",
+        "operating_margin": "",
+        "ebitda_margin": "",
+        "trend": "",
+        "vs_benchmark": ""
+      },
+      "cost_structure": {
+        "fixed_costs_percentage": "",
+        "variable_costs_percentage": "",
+        "sustainability_assessment": "",
+        "key_drivers": []
+      },
+      "efficiency_ratios": [],
+      "operational_strengths": [],
+      "improvement_opportunities": [],
+      "red_flags": []
+    },
+    "metadata": {
+      "agent_name": "Operational Efficiency Agent",
+      "timestamp": "2024-06-13T08:24:46Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"efficiency_score\": \"\",\n    \"margin_analysis\": {\n      \"gross_margin\": \"\",\n      \"operating_margin\": \"\",\n      \"ebitda_margin\": \"\",\n      \"trend\": \"\",\n      \"vs_benchmark\": \"\"\n    },\n    \"cost_structure\": {\n      \"fixed_costs_percentage\": \"\",\n      \"variable_costs_percentage\": \"\",\n      \"sustainability_assessment\": \"\",\n      \"key_drivers\": []\n    },\n    \"efficiency_ratios\": [],\n    \"operational_strengths\": [],\n    \"improvement_opportunities\": [],\n    \"red_flags\": []\n  },\n  \"metadata\": {\n    \"agent_name\": \"Operational Efficiency Agent\",\n    \"timestamp\": \"2024-06-13T08:24:46Z\"\n  }\n}"
+}

@@ -1,0 +1,77 @@
+{
+  "workflow_complete": true,
+  "created_at": "2026-01-21T00:00:00Z",
+  "knowledge_base": {
+    "rag_id": "697085b457f90ab8a46e90c1",
+    "rag_name": "pedealdocumentsknowledgebaseru1x",
+    "name": "PE Deal Documents Knowledge Base"
+  },
+  "agents_created": [
+    {
+      "name": "Document Q&A Agent",
+      "agent_id": "697085c51d92f5e2dd22900a",
+      "type": "independent",
+      "status": "created",
+      "has_schema": true
+    },
+    {
+      "name": "Liquidity Risk Agent",
+      "agent_id": "697085e11d92f5e2dd229018",
+      "type": "sub-agent",
+      "status": "created",
+      "has_schema": true,
+      "managed_by": "6970866a1d92f5e2dd229050"
+    },
+    {
+      "name": "Operational Efficiency Agent",
+      "agent_id": "697085fcd6d0dcaec111699d",
+      "type": "sub-agent",
+      "status": "created",
+      "has_schema": true,
+      "managed_by": "6970866a1d92f5e2dd229050"
+    },
+    {
+      "name": "Sustainability Analysis Agent",
+      "agent_id": "6970861b1d92f5e2dd229038",
+      "type": "sub-agent",
+      "status": "created",
+      "has_schema": true,
+      "managed_by": "6970866a1d92f5e2dd229050"
+    },
+    {
+      "name": "External Auditor Lens Agent",
+      "agent_id": "6970863cd6d0dcaec11169af",
+      "type": "sub-agent",
+      "status": "created",
+      "has_schema": true,
+      "managed_by": "6970866a1d92f5e2dd229050"
+    },
+    {
+      "name": "Diligence Coordinator Agent",
+      "agent_id": "6970866a1d92f5e2dd229050",
+      "type": "manager",
+      "status": "created",
+      "has_schema": true,
+      "manages": [
+        "697085e11d92f5e2dd229018",
+        "697085fcd6d0dcaec111699d",
+        "6970861b1d92f5e2dd229038",
+        "6970863cd6d0dcaec11169af"
+      ]
+    }
+  ],
+  "response_schemas_created": [
+    "response_schemas/document_q_a_agent_response.json",
+    "response_schemas/liquidity_risk_agent_response.json",
+    "response_schemas/operational_efficiency_agent_response.json",
+    "response_schemas/sustainability_analysis_agent_response.json",
+    "response_schemas/external_auditor_lens_agent_response.json",
+    "response_schemas/diligence_coordinator_agent_response.json"
+  ],
+  "next_steps": [
+    "Upload PE deal documents to knowledge base (rag_id: 697085b457f90ab8a46e90c1)",
+    "UI Generator will create the frontend interface",
+    "Test Document Q&A Agent with sample questions",
+    "Test Diligence Coordinator Agent for full analysis workflow"
+  ]
+}
